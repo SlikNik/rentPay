@@ -9,6 +9,6 @@ class MyUser(AbstractUser):
     about = models.TextField(blank=True, null=True)
     homepage = models.URLField(blank=True, null=True)
     REQUIRED_FIELDS = ['firstname', 'lastname', 'age', 'homepage']
-    
+
     def __str__(self):
-        return self.displayname
+        return self.username
