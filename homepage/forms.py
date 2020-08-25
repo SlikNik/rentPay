@@ -8,7 +8,7 @@ class SignupForm(forms.ModelForm):
 
     class Meta:
         model = MyUser
-        fields = ['firstname', 'lastname', 'displayname', 'age', 'homepage']
+        fields = '__all__'
 
 class LoginForm(forms.Form):
     username = forms.CharField(max_length=240)

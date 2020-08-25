@@ -21,6 +21,8 @@ def signup_view(request):
                 lastname=data.get('lastname'),
                 username=data.get('firstname').lower() + data.get('lastname').lower(), 
                 password=data.get('password'), 
+                age=data.get('age'),
+                homepage=data.get('homepage'),
                 displayname=data.get('displayname'))
             login(request, new_user)
             return HttpResponseRedirect(reverse('homepage'))
